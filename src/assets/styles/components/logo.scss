@@ -1,0 +1,7 @@
+.logo {
+    @apply bg-primary text-primary-foreground uppercase font-primary font-medium;
+    font-size: getMinMax(18px, 20px);
+    padding-left: .5em;
+    padding-right: .5em;
+    letter-spacing: .2em;
+}

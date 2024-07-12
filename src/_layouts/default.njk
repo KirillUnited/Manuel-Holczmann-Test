@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        {% block head %}
+            {% include "../_includes/head.njk" %}
+        {% endblock %}
+    </head>
+    <body class="{{ body_class }}">
+        <div class="wrapper">
+            <div class="wrapper-bg">
+                <img src="/assets/images/bg.jpg" alt="Alt text"/>
+            </div>
+            {% block header %}
+                {% include "../_includes/components/header.njk" %}
+            {% endblock %}
+            <main class="content">
+                {{ content | safe }}
+            </main>
+            {% block footer %}
+                {% include "../_includes/components/footer.njk" %}
+            {% endblock %}
+        </div>
+        {% block scripts %}
+            {% include "../_includes/scripts.njk" %}
+        {% endblock %}
+    </body>
+</html>

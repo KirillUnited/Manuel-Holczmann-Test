@@ -1,0 +1,53 @@
+.banner {
+    --size: 150px;
+    --animation-duration: 2s;
+    position: relative;
+    display: grid;
+    grid-template-rows: 0fr;
+    animation: banner-down var(--animation-duration) forwards;
+    /* padding-bottom: calc(var(--size) + 50px); */
+    &-content {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        opacity: 0;
+        animation: 3s ease 0s normal forwards 1 content-show;
+    }
+    &-footer {
+        @apply inline-flex flex-col items-center gap-4 mt-12 mx-auto text-center;
+        /* position: absolute;
+        left: 50%;
+        bottom: 0; */
+        /* transform: translate(0, calc(var(--size) / 2)); */
+        animation: 4s ease 0s normal forwards 1 content-show;
+        &-image {
+            width: var(--size);
+            height: var(--size);
+        }
+    }
+}
+@include less-md() {
+    .banner {
+        --size: 100px;
+    }
+}
+
+@keyframes banner-down {
+    from {
+        grid-template-rows: 0fr;
+    }
+    to {
+        grid-template-rows: 1fr;
+    }
+}
+@keyframes content-show {
+    from {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

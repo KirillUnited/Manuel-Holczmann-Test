@@ -1,0 +1,44 @@
+.transition-line {
+    --no-of-slides: 4;
+    --slides-in-view: 4;
+    --slide-width: 400px;
+    --iteration-time: 10s;
+    width: calc(2 * var(--no-of-slides));
+    &-item {
+        flex: 0 0 auto;
+        font-size: getMinMax(16px, 20px);
+        padding-top: 0.4em;
+        padding-bottom: 0.4em;
+        animation: scroll var(--iteration-time) linear infinite;
+        &:not(:first-child) {
+            display: flex;
+            align-items: center;
+            gap: 1em;
+            margin-left: 1em;
+            &::before {
+                display: block;
+                content: "///";
+            }
+        }
+    }
+}
+
+@include less-sm() {
+    .transition-line {
+        --no-of-slides: 3;
+        --slides-in-view: 3;
+        --slide-width: 200px;
+        --iteration-time: 4s;
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(
+            calc(var(--slide-width) * var(--no-of-slides) * -1)
+        );
+    }
+}
