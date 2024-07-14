@@ -8,6 +8,8 @@
     grid-template-rows: 0fr;
     animation: banner-down var(--animation-duration) forwards;
     &-content {
+        width: Min(getrem(767px), 100%);
+        min-height: var(--content-height);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -15,7 +17,7 @@
         overflow: hidden;
         opacity: 0;
         animation: 3s ease 0s normal forwards 1 content-show;
-        min-height: var(--content-height);
+        margin: 0 auto;
         &-text {
             font-size: getMinMax(20px, 24px);
             letter-spacing: 0.02em;
