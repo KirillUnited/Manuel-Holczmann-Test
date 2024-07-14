@@ -50,28 +50,6 @@
     .inner {
         @apply px-3 sm:px-6 py-4 sm:py-8;
     }
-
-    .subtitle {
-        text-transform: uppercase;
-        font-size: clamp(16px, 1.8vw, 20px);
-        letter-spacing: .02em;
-        text-shadow: 1px 1px 1px #000000;
-    }
-    .title {
-        font-size: clamp(24px, 2.4vw, 32px);
-        letter-spacing: .02em;
-        text-shadow: 1px 1px 1px #000000;
-    }
-    .description {
-        font-size: clamp(16px, 1.8vw, 20px);
-        letter-spacing: .02em;
-        text-shadow: 1px 1px 1px #000000;
-    }
-    .link {
-        font-size: clamp(16px, 1.8vw, 20px);
-        letter-spacing: .02em;
-        text-shadow: 1px 1px 1px #000000;
-    }
 }
 @keyframes background-scale {
     from {

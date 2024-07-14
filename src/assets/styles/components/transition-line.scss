@@ -6,7 +6,7 @@
     width: calc(2 * var(--no-of-slides));
     &-item {
         flex: 0 0 auto;
-        font-size: getMinMax(16px, 20px);
+        font-size: getMinMax(20px, 24px);
         padding-top: 0.4em;
         padding-bottom: 0.4em;
         animation: scroll var(--iteration-time) linear infinite;
