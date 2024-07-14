@@ -1,6 +1,8 @@
 .banner {
     --size: 150px;
     --animation-duration: 2s;
+    --height: 65vh;
+    --content-height: 70vh;
     position: relative;
     display: grid;
     grid-template-rows: 0fr;
@@ -13,7 +15,7 @@
         overflow: hidden;
         opacity: 0;
         animation: 3s ease 0s normal forwards 1 content-show;
-        min-height: 75vh;
+        min-height: var(--content-height);
         &-text {
             font-size: getMinMax(20px, 24px);
             letter-spacing: 0.02em;
@@ -34,7 +36,9 @@
 }
 @include less-md() {
     .banner {
-        --size: 100px;
+        --size: getrem(100px);
+        --content-height: 67vh;
+        padding-top: getrem(30px);
     }
 }
 
@@ -45,7 +49,7 @@
     }
     to {
         grid-template-rows: 1fr;
-        height: 70vh;
+        height: var(--height);
     }
 }
 @keyframes content-show {
