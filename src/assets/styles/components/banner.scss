@@ -5,20 +5,22 @@
     display: grid;
     grid-template-rows: 0fr;
     animation: banner-down var(--animation-duration) forwards;
-    /* padding-bottom: calc(var(--size) + 50px); */
     &-content {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         overflow: hidden;
         opacity: 0;
         animation: 3s ease 0s normal forwards 1 content-show;
+        min-height: 74vh;
+        &-text {
+            font-size: clamp(16px, 1.8vw, 20px);
+            letter-spacing: 0.02em;
+            text-shadow: 1px 1px 1px #000000;
+        }
     }
     &-footer {
         @apply inline-flex flex-col items-center gap-4 mt-12 mx-auto text-center;
-        /* position: absolute;
-        left: 50%;
-        bottom: 0; */
-        /* transform: translate(0, calc(var(--size) / 2)); */
         animation: 4s ease 0s normal forwards 1 content-show;
         &-image {
             width: var(--size);
@@ -35,9 +37,11 @@
 @keyframes banner-down {
     from {
         grid-template-rows: 0fr;
+        height: 0;
     }
     to {
         grid-template-rows: 1fr;
+        height: 70vh;
     }
 }
 @keyframes content-show {
