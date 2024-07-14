@@ -1,0 +1,6 @@
+.header {
+    &-inner {
+        @apply flex items-center justify-between gap-1 inner bg-background;
+        min-height: clamp(59px, 6vw, 94px);
+    }
+}
