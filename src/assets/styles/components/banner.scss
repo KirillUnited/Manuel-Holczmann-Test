@@ -36,7 +36,7 @@
 }
 @include less-md() {
     .banner {
-        --size: getrem(100px);
+        --size: 100px;
         --content-height: 67vh;
         padding-top: getrem(30px);
     }
