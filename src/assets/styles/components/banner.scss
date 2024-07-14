@@ -60,7 +60,6 @@
         --content-height: 67vh;
         --footer-translate-delta: 50px;
 
-        height: Max(550px, var(--height));
         padding-top: getrem(30px);
     }
 }
@@ -72,7 +71,7 @@
     }
     to {
         // grid-template-rows: 1fr;
-        height: var(--height);
+        height: Max(570px, var(--height));
     }
 }
 
